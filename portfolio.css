@@ -1,0 +1,209 @@
+#body {
+    background-image: linear-gradient(90deg, rgb(173, 173, 173), rgb(77, 77, 77)), linear-gradient(135deg, rgb(71, 29, 127) 0%, rgb(71, 29, 127) 52%, rgb(99, 59, 126) 52%, rgb(99, 59, 126) 54%, rgb(126, 89, 125) 54%, rgb(126, 89, 125) 56%, rgb(154, 118, 125) 56%, rgb(154, 118, 125) 64%, rgb(181, 148, 124) 64%, rgb(181, 148, 124) 82%, rgb(209, 178, 123) 82%, rgb(209, 178, 123) 100%), linear-gradient(0deg, rgb(71, 29, 127) 0%, rgb(71, 29, 127) 52%, rgb(99, 59, 126) 52%, rgb(99, 59, 126) 54%, rgb(126, 89, 125) 54%, rgb(126, 89, 125) 56%, rgb(154, 118, 125) 56%, rgb(154, 118, 125) 64%, rgb(181, 148, 124) 64%, rgb(181, 148, 124) 82%, rgb(209, 178, 123) 82%, rgb(209, 178, 123) 100%), linear-gradient(45deg, rgb(71, 29, 127) 0%, rgb(71, 29, 127) 52%, rgb(99, 59, 126) 52%, rgb(99, 59, 126) 54%, rgb(126, 89, 125) 54%, rgb(126, 89, 125) 56%, rgb(154, 118, 125) 56%, rgb(154, 118, 125) 64%, rgb(181, 148, 124) 64%, rgb(181, 148, 124) 82%, rgb(209, 178, 123) 82%, rgb(209, 178, 123) 100%);
+    background-blend-mode: overlay, overlay, overlay, normal;
+}
+
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px 1px aqua;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-family: 'Rubik Mono One', sans-serif;
+    margin-left: 10px;
+    transition: color 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-left: 10px;
+}
+
+
+#inicio {
+    /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
+    max-width: 1000px;
+    color: #ffffff;
+    height: 815px;
+}
+
+#inicio h3 {
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+#inicio p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.badge {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #e0ffe0, #ccffcc);
+    /* Degradado de fondo */
+    border: 2px solid #4caf50;
+    /* Borde */
+    color: #307933;
+    /* Color del texto */
+    font-size: 1rem;
+    /* Tamaño de la fuente */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    transition: transform 0.5s ease;
+}
+
+.badge:hover {
+    transform: scale(1.05);
+    /* Pequeña ampliación al pasar el ratón */
+}
+
+.social-pill {
+    display: flex;
+    align-items: center;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background-color: white;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.social-pill:hover {
+    background-color: black;
+    color: white;
+}
+
+.social-pill .icon {
+    margin-right: 10px;
+}
+
+
+
+
+#habilidades {
+    /* background: linear-gradient(135deg, #002b4d, #005cbf, #002b4d, #005cbf); */
+    min-height: 815px;
+    color: #ffffff;
+}
+
+#habilidades .hab-icono {
+    border: 6px solid #7abaff;
+    border-radius: 100px;
+    background-color: #fff;
+    transition: all .5s ease;
+}
+
+#habilidades .hab-icono:hover {
+    transform: scale(1.1);
+    border: 6px solid #ffd754;
+}
+
+.accordion-body li {
+    list-style: none;
+}
+
+.accordion-body strong {
+    color: #7abaff;
+}
+
+#proyectos {
+    /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
+    min-height: 815px;
+}
+
+.image-container {
+    overflow: hidden;
+    transform: scale(.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    opacity: .9;
+    transform: scale(1.1);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* #contacto{
+    height: 815px;
+} */
+
+
+
+.section-title {
+    color: #ffc107;
+}
+
+footer {
+    /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
+    height: 100px;
+
+}
+
+.section-title p {
+    font-size: 16px;
+    color: #777;
+}
+
+
+.info-box i {
+    font-size: 48px;
+    color: #f39c12;
+}
+
+.info-box h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #777;
+}
+
+.social-links a {
+    margin-left: 15px;
+}
+
+.text-center button {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-center button:hover {
+    background-color: #e74c3c;
+}
+
+
+.arrow {
+    font-size: 10rem;
+    color: #ffffff;
+    transition: color 0.5s, transform 0.5s ease-out;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: #ff007f;
+    transform: translateY(15px);
+}
