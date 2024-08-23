@@ -4,16 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio de Juan Antonio - Desarrollador web</title>
+    <title>Porfolio de Juan Antonio - Desarrollador web</title>
     <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <script type="text/javascript">
+        emailjs.init('uFjxCYbIBLMrRp0E5')
+    </script>
 </head>
 
 <body>
@@ -31,7 +38,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#inicio">Inicio</a>
+                        <a class="nav-link" id="nav-inicio" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#experiencia">Experiencia</a>
@@ -75,13 +82,13 @@
                     de calidad.</p>
 
                 <div class="pillows d-flex mt-4">
-                    <a href="" class="social-pill">
+                    <a href="https://github.com/juanAntonioCh" class="social-pill" target="_blank">
                         <i class="fa-brands fa-github icon"></i>
                         GitHub
                     </a>
 
                     <a href="https://www.linkedin.com/in/juan-antonio-carrillo-herrera-b35a61296/"
-                        class="social-pill mx-3">
+                        class="social-pill mx-3" target="_blank">
                         <i class="fab fa-linkedin icon"></i>
                         Linkedin
                     </a>
@@ -103,7 +110,7 @@
 
         <section id="experiencia" class="container d-flex flex-column justify-content-center">
             <h2 class="d-flex text-white mb-5 fs-2 gap-2">
-                <svg class="size-8" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                <svg class="size-8" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                     fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
@@ -136,8 +143,10 @@
                         </div>
 
                         <div class="exp-descripcion text-white col-12 col-md-7">
-                            <p>Durante mis prácticas Erasmus estuve trabajando en el desarrollo de una aplicación móvil,
-                                implementando nuevas funcionalidades y realizando labores de diseño. </p>
+                            <p>Durante mis prácticas Erasmus en Poznan, Polonia, trabajé en el desarrollo de una
+                                aplicación móvil utilizando tecnologías como Android Studio, React Native y TypeScript.
+                                Mi labor consistió en implementar nuevas funcionalidades y mejorar el diseño de la
+                                interfaz de usuario.</p>
 
                         </div>
                     </div>
@@ -152,7 +161,7 @@
                 <i class="bi bi-window-stack"></i> -->
             <!-- <h2 class="d-flex text-white mb-5 fs-2 gap-2 align-self-center"> -->
             <h2 class="d-flex text-white mb-5 fs-2 gap-2">
-                <?xml version="1.0" ?><svg viewBox="0 0 20.727 22.417" xmlns="http://www.w3.org/2000/svg" x="0px"
+                <!-- <?xml version="1.0" ?><svg viewBox="0 0 20.727 22.417" xmlns="http://www.w3.org/2000/svg" x="0px"
                     y="0px" width="45" height="45">
                     <g data-name="Layer 2" id="Layer_2">
                         <g data-name="Layer 1" id="Layer_1-2">
@@ -161,7 +170,8 @@
                                 fill="white" data-name="think positive" id="think_positive" />
                         </g>
                     </g>
-                </svg>
+                </svg> -->
+                <i class="bi bi-window-stack"></i>
                 Habilidades
             </h2>
 
@@ -229,6 +239,21 @@
                         </svg>
                     </div>
                     <!-- <p class="text-center">JavaScript</p> -->
+                </div>
+
+                <!-- TypeScript -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="hab-icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" class="p-2"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M20 0h216c11.046 0 20 8.954 20 20v216c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V20C0 8.954 8.954 0 20 0Z"
+                                fill="#3178C6" />
+                            <path
+                                d="M150.518 200.475v27.62c4.492 2.302 9.805 4.028 15.938 5.179 6.133 1.151 12.597 1.726 19.393 1.726 6.622 0 12.914-.633 18.874-1.899 5.96-1.266 11.187-3.352 15.678-6.257 4.492-2.906 8.048-6.704 10.669-11.394 2.62-4.689 3.93-10.486 3.93-17.391 0-5.006-.749-9.394-2.246-13.163a30.748 30.748 0 0 0-6.479-10.055c-2.821-2.935-6.205-5.567-10.149-7.898-3.945-2.33-8.394-4.531-13.347-6.602-3.628-1.497-6.881-2.949-9.761-4.359-2.879-1.41-5.327-2.848-7.342-4.316-2.016-1.467-3.571-3.021-4.665-4.661-1.094-1.64-1.641-3.495-1.641-5.567 0-1.899.489-3.61 1.468-5.135s2.362-2.834 4.147-3.927c1.785-1.094 3.973-1.942 6.565-2.547 2.591-.604 5.471-.906 8.638-.906 2.304 0 4.737.173 7.299.518 2.563.345 5.14.877 7.732 1.597a53.669 53.669 0 0 1 7.558 2.719 41.7 41.7 0 0 1 6.781 3.797v-25.807c-4.204-1.611-8.797-2.805-13.778-3.582-4.981-.777-10.697-1.165-17.147-1.165-6.565 0-12.784.705-18.658 2.115-5.874 1.409-11.043 3.61-15.506 6.602-4.463 2.993-7.99 6.805-10.582 11.437-2.591 4.632-3.887 10.17-3.887 16.615 0 8.228 2.375 15.248 7.127 21.06 4.751 5.811 11.963 10.731 21.638 14.759a291.458 291.458 0 0 1 10.625 4.575c3.283 1.496 6.119 3.049 8.509 4.66 2.39 1.611 4.276 3.366 5.658 5.265 1.382 1.899 2.073 4.057 2.073 6.474a9.901 9.901 0 0 1-1.296 4.963c-.863 1.524-2.174 2.848-3.93 3.97-1.756 1.122-3.945 1.999-6.565 2.632-2.62.633-5.687.95-9.2.95-5.989 0-11.92-1.05-17.794-3.151-5.875-2.1-11.317-5.25-16.327-9.451Zm-46.036-68.733H140V109H41v22.742h35.345V233h28.137V131.742Z"
+                                fill="#FFF" />
+                        </svg>
+                    </div>
                 </div>
 
                 <!-- REACT -->
@@ -377,88 +402,7 @@
                     </div>
                     <!-- <p class="text-center">Docker</p> -->
                 </div>
-
-                <!-- SQL -->
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="hab-icono">
-                        <img src="imgs/sql-svgrepo-com.svg" alt="" width="100px" height="100px">
-                    </div>
-                    <!-- <p class="text-center">SQL</p> -->
-                </div>
             </div>
-
-
-            <!-- SKILLS -->
-            <!-- <div class="row justify-content-center mt-5">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Hard skills
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <ul>
-                                        <li><strong>Lenguajes de Programación:</strong> JavaScript, Python,
-                                            Java</li>
-                                        <li><strong>Frameworks:</strong> React, Django, Django Rest Framework, Bootstrap
-                                        </li>
-                                        <li><strong>Bases de Datos:</strong> SQL (MySQL, MariaDB)</li>
-                                        <li><strong>Control de Versiones:</strong> Git</li>
-                                        <li><strong>Desarrollo Frontend:</strong> DOM manipulation, Responsive
-                                            Design, HTML, CSS, Sass.</li>
-                                        <li><strong>Desarrollo Backend:</strong> Django, Django Rest Framework</li>
-                                        <li><strong>Manejo de Herramientas:</strong> IDEs (Visual Studio Code),
-                                            DevTools.</li>
-                                        <li><strong>Control de Dependencias:</strong> npm, pip, yarn.</li>
-                                        <li><strong>Testing:</strong> JUnit</li>
-                                        <li><strong>Despliegue y Hosting:</strong> Docker, Vercel, AlwaysData, Choreo
-                                        </li>
-                                        <li><strong>Seguridad Web:</strong> SSL/TLS,
-                                            Cross-Site Request Forgery (CSRF).</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Soft skills
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <ul>
-                                        <li><strong>Trabajo en Equipo:</strong> Colaboración efectiva con miembros del
-                                            equipo para lograr objetivos comunes.</li>
-                                        <li><strong>Resolución de Problemas:</strong> Capacidad para identificar,
-                                            analizar y resolver problemas de manera eficiente.</li>
-                                        <li><strong>Adaptabilidad:</strong> Flexibilidad para ajustarse a cambios en
-                                            tecnologías y requerimientos del proyecto.</li>
-                                        <li><strong>Iniciativa:</strong> Capacidad para tomar la iniciativa y proponer
-                                            soluciones de manera proactiva.</li>
-                                        <li><strong>Gestión del Tiempo:</strong> Habilidad para organizar y priorizar
-                                            tareas de manera eficiente.</li>
-                                        <li><strong>Creatividad:</strong> Habilidad para pensar de manera innovadora y
-                                            proponer soluciones creativas.</li>
-                                        <li><strong>Responsabilidad:</strong> Compromiso con los plazos y la calidad del
-                                            trabajo.</li>
-                                        <li><strong>Aprendizaje Continuo:</strong> Disposición para adquirir nuevas
-                                            habilidades y mantenerse actualizado.</li>
-                                        <li><strong>Resiliencia:</strong> Capacidad para manejar la presión y superar
-                                            desafíos con una actitud positiva.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
         </section>
 
 
@@ -479,15 +423,19 @@
             <div class="container d-flex flex-column justify-content-center align-content-center mb-5">
                 <div class="row proyecto-container d-flex">
                     <div class="col-12 col-md-5">
-                        <img src="imgs/410shots_so.png" class="img-fluid" alt="Imagen ConectaCar">
+                        <img src="imgs/ConectaCar.png" class="img-fluid" alt="Imagen ConectaCar">
                     </div>
                     <div class="d-flex flex-column proyectos-info-conainer col-12 col-md-7 mt-3 mt-md-0">
-                        <h2 class="text-white">ConectaCar - Aplicación para el alquiler de vehículos entre
-                            particulares</h2>
-                        <p class="text-white">ConectaCar en na aplicacón muy bonita que he desarrollado .....</p>
+                        <h2 class="text-white mb-3">ConectaCar</h2>
+                        <p class="text-white">Aplicación web full-stack desarrollada para la gestión de alquileres y
+                            reservas de vehículos entre particulares, creada como trabajo de fin de grado. El backend
+                            está implementado en Python utilizando Django Rest Framework, mientras que el frontend está
+                            construido en JavaScript con React. Además, se ha utilizado Bootstrap para facilitar el
+                            diseño responsive.</p>
 
                         <div class="d-flex gap-3 proyectos-links-container">
-                            <a href="https://github.com/juanAntonioCh/project" role="link" class="px-3 py-2">
+                            <a href="https://github.com/juanAntonioCh/project" role="link" class="px-3 py-2"
+                                target="_blank">
                                 <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -513,14 +461,17 @@
 
                 <div class="row proyecto-container d-flex">
                     <div class="col-12 col-md-5">
-                        <img src="imgs/770shots_so.png" class="img-fluid" alt="Locallibrary">
+                        <img src="imgs/Locallibrary.png" class="img-fluid" alt="Locallibrary">
                     </div>
                     <div class="d-flex flex-column proyectos-info-conainer col-12 col-md-7 mt-3 mt-md-0">
-                        <h2 class="text-white">Local Library</h2>
-                        <p class="text-white">ConectaCar en na aplicacón muy bonita que he desarrollado .....</p>
+                        <h2 class="text-white mb-3">Local Library</h2>
+                        <p class="text-white">Local Library es una aplicación web desarrollada siguiendo el tutorial de
+                            Django en MDN. A través de este proyecto, aprendí los fundamentos del desarrollo web con
+                            Django, incluyendo el manejo de bases de datos, la creación de vistas, plantillas,
+                            formularios y la administración de usuarios.</p>
 
                         <div class="d-flex gap-3 proyectos-links-container">
-                            <a href="https://github.com/juanAntonioCh/project" role="link" class="px-3 py-2">
+                            <a href="" role="link" class="px-3 py-2" target="_blank">
                                 <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -530,14 +481,16 @@
                                     </path>
                                 </svg>
                                 Code
-                            </a> <a href="#" role="link" class="gap-2 px-3 py-2">
+                            </a> <a
+                                href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+                                role="link" class="gap-2 px-3 py-2" target="_blank">
                                 <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                                 </svg>
-                                Preview
+                                Tutorial MDN
                             </a>
                         </div>
                     </div>
@@ -545,13 +498,15 @@
 
                 <div class="row proyecto-container d-flex">
                     <div class="col-12 col-md-5">
-                        <img src="imgs/416shots_so.png" class="img-fluid" alt="Página de recetas">
+                        <img src="imgs/pagina_recetas.png" class="img-fluid" alt="Página de recetas">
                     </div>
                     <div class="d-flex flex-column proyectos-info-conainer col-12 col-md-7 mt-3 mt-md-0">
-                        <h2 class="text-white">Ideas Para Cocinar</h2>
-                        <p class="text-white">ConectaCar en na aplicacón muy bonita que he desarrollado .....</p>
+                        <h2 class="text-white mb-3">Ideas Para Cocinar</h2>
+                        <p class="text-white">Este sitio web de recetas fue creado al inicio del curso 2ºDAW como un
+                            primer acercamiento a las hojas de estilo y al diseño responsive utilizando media queries.
+                        </p>
                         <div class="d-flex gap-3 proyectos-links-container">
-                            <a href="https://github.com/juanAntonioCh/project" role="link" target="_blank"
+                            <a href="https://github.com/juanAntonioCh/IdeasParaCocinar" role="link" target="_blank"
                                 class="px-3 py-2">
                                 <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -562,7 +517,8 @@
                                     </path>
                                 </svg>
                                 Code
-                            </a> <a href="https://herreraweb.alwaysdata.net/" role="link" class="gap-2 px-3 py-2">
+                            </a> <a href="https://herreraweb.alwaysdata.net/" role="link" class="gap-2 px-3 py-2"
+                                target="_blank">
                                 <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -581,113 +537,92 @@
 
 
         <!-- Seccion de CONTACTO -->
-        <section id="contacto" class="row d-flex flex-column justify-content-center text-center">
-            <div class="container pt-5 pb-5">
+        <section id="contacto" class="container d-flex flex-column justify-content-center text-center p-5 mt-5 mb-5">
 
-                <div class="section-title mb-5 text-center">
-                    <h2 class="mb-3">Contacta conmigo</h2>
-                    <p>Si tienes alguna pregunta, comentario o simplemente quieres saludar, no dudes en ponerte en
-                        contacto.</p>
-                </div>
 
-                <div class="row">
-                    <!-- Contacto -->
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="info-box text-center mb-3">
-                                    <i class="bx bx-share-alt"></i>
-                                    <h3>Redes sociales</h3>
-                                    <div class="social-links">
-                                        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <div class="row section-title mb-5 text-center">
+                <h2 class="mb-3">Contacta conmigo</h2>
+                <p>Si tienes alguna pregunta, comentario o simplemente quieres saludar, no dudes en ponerte en
+                    contacto.</p>
+            </div>
+
+            <div class="row">
+                <!-- Contacto -->
+                <div class="col-lg-6 mb-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="info-box text-center mb-3">
+                                <i class="bx bx-share-alt"></i>
+                                <h3>Redes sociales</h3>
+                                <div class="social-links">
+                                    <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                                         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                                         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
-                                        <a href="https://github.com/juanAntonioCh/" class="github"><i
-                                                class="bi bi-github"></i></i></a>
-                                        <a href="https://www.linkedin.com/in/juan-antonio-carrillo-herrera-b35a61296/"
-                                            class="linkedin"><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box mt-4 text-center">
-                                    <i class="bx bx-envelope"></i>
-                                    <h3>Correo electrónico</h3>
-                                    <p>carrilloherrerajuanantonio@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box mt-4 text-center">
-                                    <i class="bx bx-phone-call"></i>
-                                    <h3>Teléfono</h3>
-                                    <p>+34 693 01 70 56</p>
+                                    <a href="https://github.com/juanAntonioCh/" class="github" target="_blank"><i
+                                            class="bi bi-github"></i></i></a>
+                                    <a href="https://www.linkedin.com/in/juan-antonio-carrillo-herrera-b35a61296/"
+                                        class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="info-box mt-4 text-center">
+                                <i class="bx bx-envelope"></i>
+                                <h3>Correo electrónico</h3>
+                                <p>carrilloherrerajuanantonio@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box mt-4 text-center">
+                                <i class="bx bx-phone-call"></i>
+                                <h3>Teléfono</h3>
+                                <p>+34 693 01 70 56</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Formulario -->
-                    <div class="col-lg-6">
-                        <form id="contact-form" action="https://formsubmit.co/carrilloherrerajuanantonio@gmail.com" method="POST">
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="nombre" class="form-control" id="nombre"
-                                        placeholder="Nombre" required>
-                                </div>
-                                <div class="col-md-6 form-group mt-3 mt-md-0">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email"
-                                        required>
-                                </div>
-                            </div>
-
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto"
-                                    required>
-                            </div>
-
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="mensaje" rows="6" placeholder="Mensaje"></textarea>
-                            </div>
-
-                            <div class="text-center pt-3">
-                                <button type="submit">Enviar Mensaje</button>
-                            </div>
-                        </form>
-                    </div>
-
                 </div>
+
+                <!-- Formulario -->
+                <div class="col-lg-6">
+                    <!-- <form id="contact-form" action="https://formsubmit.co/carrilloherrerajuanantonio@gmail.com" method="POST"> -->
+                    <form id="form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="from_name" id="from_name" class="form-control"
+                                    placeholder="Nombre" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email_id" id="email_id"
+                                    placeholder="Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" id="message" rows="6" placeholder="Mensaje"
+                                required></textarea>
+                        </div>
+
+                        <div class="text-center pt-3">
+                            <input type="submit" id="button" value="Enviar Mensaje">
+                        </div>
+                    </form>
+                </div>
+
             </div>
+
         </section>
 
         <footer class="row d-flex flex-column justify-content-center text-center">
 
         </footer>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"></script>
-    <script>
-        VANTA.WAVES({
-            el: "#habilidades",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            waveSpeed: 1.25,
-            zoom: 1.75
-        })
-
-    </script> -->
 </body>
 
 </html>

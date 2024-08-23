@@ -2,10 +2,10 @@ body {
     /* background-image: linear-gradient(90deg, rgb(173, 173, 173), rgb(77, 77, 77)), linear-gradient(135deg, rgb(71, 29, 127) 0%, rgb(71, 29, 127) 52%, rgb(99, 59, 126) 52%, rgb(99, 59, 126) 54%, rgb(126, 89, 125) 54%, rgb(126, 89, 125) 56%, rgb(154, 118, 125) 56%, rgb(154, 118, 125) 64%, rgb(181, 148, 124) 64%, rgb(181, 148, 124) 82%, rgb(209, 178, 123) 82%, rgb(209, 178, 123) 100%), linear-gradient(0deg, rgb(71, 29, 127) 0%, rgb(71, 29, 127) 52%, rgb(99, 59, 126) 52%, rgb(99, 59, 126) 54%, rgb(126, 89, 125) 54%, rgb(126, 89, 125) 56%, rgb(154, 118, 125) 56%, rgb(154, 118, 125) 64%, rgb(181, 148, 124) 64%, rgb(181, 148, 124) 82%, rgb(209, 178, 123) 82%, rgb(209, 178, 123) 100%), linear-gradient(45deg, rgb(71, 29, 127) 0%, rgb(71, 29, 127) 52%, rgb(99, 59, 126) 52%, rgb(99, 59, 126) 54%, rgb(126, 89, 125) 54%, rgb(126, 89, 125) 56%, rgb(154, 118, 125) 56%, rgb(154, 118, 125) 64%, rgb(181, 148, 124) 64%, rgb(181, 148, 124) 82%, rgb(209, 178, 123) 82%, rgb(209, 178, 123) 100%);
     background-blend-mode: overlay, overlay, overlay, normal; */
 
-    background-image: linear-gradient(45deg, rgb(82, 82, 82), rgb(99, 99, 99)), linear-gradient(90deg, rgb(12, 3, 124) 0%, rgb(12, 3, 124) 63%, rgb(16, 35, 140) 63%, rgb(16, 35, 140) 68%, rgb(19, 67, 156) 68%, rgb(19, 67, 156) 77%, rgb(23, 100, 171) 77%, rgb(23, 100, 171) 86%, rgb(26, 132, 187) 86%, rgb(26, 132, 187) 92%, rgb(30, 164, 203) 92%, rgb(30, 164, 203) 100%), linear-gradient(180deg, rgb(12, 3, 124) 0%, rgb(12, 3, 124) 63%, rgb(16, 35, 140) 63%, rgb(16, 35, 140) 68%, rgb(19, 67, 156) 68%, rgb(19, 67, 156) 77%, rgb(23, 100, 171) 77%, rgb(23, 100, 171) 86%, rgb(26, 132, 187) 86%, rgb(26, 132, 187) 92%, rgb(30, 164, 203) 92%, rgb(30, 164, 203) 100%);
-    background-blend-mode: overlay, overlay, normal;
+    /* background-image: linear-gradient(45deg, rgb(82, 82, 82), rgb(99, 99, 99)), linear-gradient(90deg, rgb(12, 3, 124) 0%, rgb(12, 3, 124) 63%, rgb(16, 35, 140) 63%, rgb(16, 35, 140) 68%, rgb(19, 67, 156) 68%, rgb(19, 67, 156) 77%, rgb(23, 100, 171) 77%, rgb(23, 100, 171) 86%, rgb(26, 132, 187) 86%, rgb(26, 132, 187) 92%, rgb(30, 164, 203) 92%, rgb(30, 164, 203) 100%), linear-gradient(180deg, rgb(12, 3, 124) 0%, rgb(12, 3, 124) 63%, rgb(16, 35, 140) 63%, rgb(16, 35, 140) 68%, rgb(19, 67, 156) 68%, rgb(19, 67, 156) 77%, rgb(23, 100, 171) 77%, rgb(23, 100, 171) 86%, rgb(26, 132, 187) 86%, rgb(26, 132, 187) 92%, rgb(30, 164, 203) 92%, rgb(30, 164, 203) 100%);
+    background-blend-mode: overlay, overlay, normal; */
 
-    /* background-color: #010058; */
+    background-color: #010058;
 
     /* background-image: linear-gradient(135deg, rgb(62, 62, 62), rgb(179, 179, 179)), linear-gradient(135deg, rgba(84, 137, 228, 0.5) 0%, rgba(84, 137, 228, 0.5) 51%, rgba(69, 113, 204, 0.5) 51%, rgba(69, 113, 204, 0.5) 58%, rgba(54, 88, 180, 0.5) 58%, rgba(54, 88, 180, 0.5) 61%, rgba(38, 64, 157, 0.5) 61%, rgba(38, 64, 157, 0.5) 63%, rgba(23, 39, 133, 0.5) 63%, rgba(23, 39, 133, 0.5) 75%, rgba(8, 15, 109, 0.5) 75%, rgba(8, 15, 109, 0.5) 100%), linear-gradient(90deg, rgb(84, 137, 228) 0%, rgb(84, 137, 228) 51%, rgb(69, 113, 204) 51%, rgb(69, 113, 204) 58%, rgb(54, 88, 180) 58%, rgb(54, 88, 180) 61%, rgb(38, 64, 157) 61%, rgb(38, 64, 157) 63%, rgb(23, 39, 133) 63%, rgb(23, 39, 133) 75%, rgb(8, 15, 109) 75%, rgb(8, 15, 109) 100%);
     background-blend-mode: overlay, overlay, normal; */
@@ -17,14 +17,32 @@ body {
 }
 
 .navbar-nav .nav-link {
+    opacity: .8;
     font-size: 1rem;
     font-family: 'Rubik Mono One', sans-serif;
     margin-left: 10px;
     transition: color 0.3s ease-out;
 }
 
+.navbar-nav .nav-link.active {
+    transition: all .3s ease;
+}
+
+.navbar-nav .nav-link.active {
+    color: #010058;
+    opacity: 1;
+}
+
+/* Aumentar el tamaño del link cuando el navbar no este en pantallas pequeñas
+porque en el navbar collapse, los links no se ven bien si se le aplica el scale */
+@media (min-width: 990px) {
+    .navbar-nav .nav-link.active {
+        transform: scale(1.05);
+    }
+}
+
 .navbar-nav .nav-link:hover {
-    color: #ffc107;
+    color: #010058;
 }
 
 .navbar-toggler {
@@ -34,8 +52,7 @@ body {
 
 
 #inicio {
-    /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
-    max-width: 1000px;
+    max-width: 1100px;
     color: #ffffff;
     height: 815px;
 }
@@ -45,9 +62,27 @@ body {
 }
 
 #inicio p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
+
+.arrow {
+    font-size: 10rem;
+    color: #ffffff;
+    transition: color 0.5s, transform 0.5s ease-out;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: #ff007f;
+    transform: translateY(25px);
+}
+
+/* @media (max-width: 800px) {
+    .arrow {
+        display: none;
+    }
+} */
 
 
 .badge {
@@ -206,7 +241,8 @@ body {
     /* background: linear-gradient(135deg, #002b4d, #005cbf, #002b4d, #005cbf); */
     scroll-margin-top: 100px;
     max-width: 1100px;
-    min-height: 815px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     color: #ffffff;
 }
 
@@ -222,13 +258,6 @@ body {
     border: 6px solid #ffd754;
 }
 
-.accordion-body li {
-    list-style: none;
-}
-
-.accordion-body strong {
-    color: #7abaff;
-}
 
 #proyectos {
     /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
@@ -269,20 +298,26 @@ body {
 
 
 #contacto{
+    scroll-margin-top: 100px;
+    max-width: 1100px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px aqua;
     background-color: white;
 }
 
 
 
-.section-title {
-    color: #ffc107;
-}
-
 footer {
     /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
     height: 70px;
-
 }
+
+@media (max-width: 800px) {
+    footer {
+        height: 0px;
+    }
+}
+
 
 .section-title p {
     font-size: 16px;
@@ -292,7 +327,7 @@ footer {
 
 .info-box i {
     font-size: 48px;
-    color: #f39c12;
+    color: #010058;
 }
 
 .info-box h3 {
@@ -314,8 +349,8 @@ footer {
     color: #e74c3c;
 }
 
-.text-center button {
-    background-color: #f39c12;
+#button {
+    background-color: #010058;
     color: #fff;
     padding: 10px 20px;
     font-size: 18px;
@@ -325,19 +360,6 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.text-center button:hover {
+#button:hover {
     background-color: #e74c3c;
-}
-
-
-.arrow {
-    font-size: 10rem;
-    color: #ffffff;
-    transition: color 0.5s, transform 0.5s ease-out;
-    cursor: pointer;
-}
-
-.arrow:hover {
-    color: #ff007f;
-    transform: translateY(25px);
 }

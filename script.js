@@ -1,18 +1,63 @@
-// (function() {
-//     emailjs.init('uFjxCYbIBLMrRp0E5');
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const btn = document.getElementById('button');
+    const inicio = document.getElementById('nav-inicio')
 
-//     document.getElementById('contact-form').addEventListener('submit', function(event) {
-//         event.preventDefault();
+    inicio.classList.add('active')
 
-//         this.contact_number.value = Math.random() * 100000 | 0;
+    window.addEventListener('scroll', function () {
+        let current = '';
 
-//         emailjs.sendForm('service_113i5wm', 'template_j85vdyb', this)
-//             .then(function() {
-//                 console.log('Correo enviado!');
-//                 alert('Correo enviado exitosamente!');
-//             }, function(error) {
-//                 console.log('Error al enviar el correo:', error);
-//                 alert('Hubo un problema al enviar el correo. Por favor, intenta nuevamente.');
-//             });
-//     });
-// })();
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(navLink => {
+            navLink.classList.remove('active');
+            if (navLink.getAttribute('href').substring(1) === current) {
+                navLink.classList.add('active');
+            }
+        });
+    });
+
+
+    //Envío del correo electrónico
+    document.getElementById('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_j85vdyb';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Enviar Mensaje';
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Enviado!',
+                    text: 'Tu mensaje ha sido enviado exitosamente.',
+                    confirmButtonText: 'OK'
+                });
+                //limpiar los campos del formulario
+                this.reset()
+            }, (err) => {
+                btn.value = 'Enviar Mensaje';
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo salió mal. Por favor, intenta de nuevo.',
+                    confirmButtonText: 'OK'
+                });
+                //limpiar los campos del formulario
+                this.reset()
+            });
+    });
+
+
+});
