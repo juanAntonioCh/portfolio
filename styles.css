@@ -13,14 +13,14 @@ body {
 
 .navbar {
     transition: background-color 0.3s ease-in-out;
-    box-shadow: 0px 4px 8px 1px aqua;
+    box-shadow: 0px 2px 8px 1px aqua;
 }
 
 .navbar-nav .nav-link {
     opacity: .8;
     font-size: 1rem;
     font-family: 'Rubik Mono One', sans-serif;
-    margin-left: 10px;
+    margin-left: 2em;
     transition: color 0.3s ease-out;
 }
 
@@ -33,13 +33,6 @@ body {
     opacity: 1;
 }
 
-/* Aumentar el tamaño del link cuando el navbar no este en pantallas pequeñas
-porque en el navbar collapse, los links no se ven bien si se le aplica el scale */
-@media (min-width: 990px) {
-    .navbar-nav .nav-link.active {
-        transform: scale(1.05);
-    }
-}
 
 .navbar-nav .nav-link:hover {
     color: #010058;
@@ -52,21 +45,22 @@ porque en el navbar collapse, los links no se ven bien si se le aplica el scale 
 
 
 #inicio {
-    max-width: 1100px;
+    height: 85vh;
+    width: 140vh;
     color: #ffffff;
-    height: 815px;
+
+    /* min-height: 715px; */
 }
 
-#inicio h3 {
+#inicio h4 {
     font-family: 'Rubik Mono One', sans-serif;
 }
 
 #inicio p {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.1rem;
 }
 
-.arrow {
+/* .arrow {
     font-size: 10rem;
     color: #ffffff;
     transition: color 0.5s, transform 0.5s ease-out;
@@ -76,7 +70,7 @@ porque en el navbar collapse, los links no se ven bien si se le aplica el scale 
 .arrow:hover {
     color: #ff007f;
     transform: translateY(25px);
-}
+} */
 
 /* @media (max-width: 800px) {
     .arrow {
@@ -127,7 +121,7 @@ porque en el navbar collapse, los links no se ven bien si se le aplica el scale 
 #experiencia {
     /* min-height: 315px; */
     scroll-margin-top: 100px;
-    max-width: 1100px;
+    width: 140vh;
 }
 
 
@@ -240,7 +234,7 @@ porque en el navbar collapse, los links no se ven bien si se le aplica el scale 
 #habilidades {
     /* background: linear-gradient(135deg, #002b4d, #005cbf, #002b4d, #005cbf); */
     scroll-margin-top: 100px;
-    max-width: 1100px;
+    width: 140vh;
     margin-top: 100px;
     margin-bottom: 100px;
     color: #ffffff;
@@ -262,12 +256,11 @@ porque en el navbar collapse, los links no se ven bien si se le aplica el scale 
 #proyectos {
     /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
     scroll-margin-top: 100px;
-    min-height: 815px;
-    max-width: 1100px;
+    width: 140vh;
 }
 
 .proyecto-container {
-    margin-bottom: 60px;
+    margin-bottom: 4rem;
     transition: all 0.3s ease-in-out;
 }
 
@@ -299,7 +292,7 @@ porque en el navbar collapse, los links no se ven bien si se le aplica el scale 
 
 #contacto{
     scroll-margin-top: 100px;
-    max-width: 1100px;
+    width: 140vh;
     border-radius: 20px;
     box-shadow: 0 4px 20px aqua;
     background-color: white;
@@ -309,7 +302,7 @@ porque en el navbar collapse, los links no se ven bien si se le aplica el scale 
 
 footer {
     /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
-    height: 70px;
+    height: 8vh;
 }
 
 @media (max-width: 800px) {
