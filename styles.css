@@ -29,6 +29,7 @@ body {
 }
 
 .navbar-nav .nav-link.active {
+    transform: scale(1.05);
     color: #010058;
     opacity: 1;
 }

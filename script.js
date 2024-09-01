@@ -2,9 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
     const btn = document.getElementById('button');
-    const inicio = document.getElementById('nav-inicio')
-
-    inicio.classList.add('active')
 
     window.addEventListener('scroll', function () {
         let current = '';
