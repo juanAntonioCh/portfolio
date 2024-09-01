@@ -46,7 +46,7 @@ body {
 
 #inicio {
     height: 85vh;
-    width: 140vh;
+    max-width: 140vh;
     color: #ffffff;
 
     /* min-height: 715px; */
@@ -121,9 +121,9 @@ body {
 #experiencia {
     /* min-height: 315px; */
     scroll-margin-top: 100px;
-    width: 140vh;
+    max-width: 140vh;
+    /* max-width: 1100px; */
 }
-
 
 
 
@@ -151,7 +151,6 @@ body {
 }
 
 
-
 .timeline .timeline-item:after {
     clear: both;
 }
@@ -167,18 +166,6 @@ body {
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175);
 }
-
-/* .timeline .timeline-item .timeline-panel:before {
-    position: absolute;
-    top: 2px;
-    left: -4.5%;
-    display: inline-block;
-    border-top: 15px solid transparent;
-    border-right: 15px solid #ccc;
-    border-left: 0 solid #ccc;
-    border-bottom: 15px solid transparent;
-    content: " ";
-} */
 
 
 .timeline .timeline-item .timeline-image {
@@ -203,6 +190,9 @@ body {
 @media (max-width: 990px) {
     .timeline .timeline-item .timeline-image {
         left: 0%;
+        width: 26px;
+        height: 26px;
+        border: 6px solid #e9ecef;
     }
 
     .timeline .timeline-item .timeline-panel {
@@ -212,8 +202,8 @@ body {
 
 @media (max-width: 770px) {
     .exp-descripcion {
-        margin-top: 20px;
-        padding-left: 55px;
+        margin-top: 25px;
+        padding-left: 45px;
     }
 
     .timeline .timeline-item .timeline-image {
@@ -225,8 +215,40 @@ body {
     .timeline .timeline-item .timeline-panel {
         left: 10%;
     }
+
     .timeline .timeline-item .timeline-image {
-        left: -1.5%;
+        left: -0.5%;
+    }
+}
+
+@media (max-width: 575px) {
+    .timeline .timeline-item .timeline-panel:before {
+        position: absolute;
+        top: 6px;
+        left: -8.9%;
+        display: inline-block;
+        border-top: 25px solid transparent;
+        border-right: 25px solid #ccc;
+        border-left: 0 solid #ccc;
+        border-bottom: 25px solid transparent;
+        content: " ";
+    }
+
+    .timeline .timeline-item .timeline-image {
+        display: none;
+    }
+
+    .timeline:before {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .timeline .timeline-item .timeline-panel:before {
+        left: -8.9%;
+        border-top: 20px solid transparent;
+        border-right: 20px solid #ccc;
+        border-bottom: 20px solid transparent;
     }
 }
 
@@ -234,7 +256,7 @@ body {
 #habilidades {
     /* background: linear-gradient(135deg, #002b4d, #005cbf, #002b4d, #005cbf); */
     scroll-margin-top: 100px;
-    width: 140vh;
+    max-width: 140vh;
     margin-top: 100px;
     margin-bottom: 100px;
     color: #ffffff;
@@ -256,7 +278,7 @@ body {
 #proyectos {
     /* background: linear-gradient(45deg, #002b4d, #005cbf, #002b4d, #005cbf); */
     scroll-margin-top: 100px;
-    width: 140vh;
+    max-width: 140vh;
 }
 
 .proyecto-container {
@@ -275,7 +297,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.proyectos-links-container a{
+.proyectos-links-container a {
     background-color: white;
     color: black;
     border-radius: 20px;
@@ -283,16 +305,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.proyectos-links-container a:hover{
-    background-color: rgb(0, 0, 0);  
-    color: white; 
+.proyectos-links-container a:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 
 
-#contacto{
+#contacto {
     scroll-margin-top: 100px;
-    width: 140vh;
+    max-width: 140vh;
     border-radius: 20px;
     box-shadow: 0 4px 20px aqua;
     background-color: white;
